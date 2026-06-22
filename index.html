@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aunt Barbara's Cakes | Bespoke Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Aunt Barbara's Cakes</h1>
+            <p>Bespoke Wedding Cakes, Signature Red Velvet & Gourmet Cupcakes</p>
+            <nav>
+                <a href="#menu" class="nav-link">Everyday Menu</a>
+                <a href="#contact" class="nav-link">Get in Touch</a>
+                <!-- This now triggers the popup -->
+                <button class="btn-text open-modal-btn">Order Now</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Beautiful, Double-Flavored Cakes for Your Big Day</h2>
+            <p>From 3-tier wedding centerpieces to elegant birthday cupcakes.</p>
+            <button class="btn-primary open-modal-btn">Book a Consultation</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Specialties</h2>
+        <div class="container">
+            <div class="card">
+                <div class="card-icon">🧁</div>
+                <h3>Gourmet Cupcakes</h3>
+                <p>Sold by the dozen. Perfect for parties and everyday celebrations.</p>
+                <button class="btn-outline open-modal-btn">Order Cupcakes</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎂</div>
+                <h3>Standard Birthday Cakes</h3>
+                <p>Classic 8" and 10" rounds in vanilla, chocolate, and signature Red Velvet.</p>
+                <button class="btn-outline open-modal-btn">Order a Cake</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>3-Tier Wedding Cakes</h3>
+                <p>Fully customized designs. Mix and match tiers for a double-flavored experience.</p>
+                <button class="btn-outline open-modal-btn">Consult With Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Catchy Customer Service Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Talk Cake!</h2>
+            <p class="contact-subtitle">Have a question about flavors, delivery, or a wild custom design? We are here to sweeten your day. Reach out to Aunt Barbara directly!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>💌 Email Us</h3>
+                    <p>For detailed inquiries and mood boards:</p>
+                    <a href="mailto:hello@barbarascakes.com" class="contact-link">hello@barbarascakes.com</a>
+                </div>
+                <div class="contact-info-box">
+                    <h3>📞 Call the Bakery</h3>
+                    <p>Need a quick answer? Ring us up:</p>
+                    <p class="contact-highlight">+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-info-box">
+                    <h3>🕒 Baking Hours</h3>
+                    <p>Tuesday - Saturday: 8:00 AM - 4:00 PM</p>
+                    <p>Sunday & Monday: Closed for baking magic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Order Popup (Modal) -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="modal-title">Design Your Cake</h2>
+            <p class="modal-subtitle">Fill this out and Aunt Barbara will email you within 24 hours.</p>
+            
+            <form action="https://formsubmit.co/auntbarbara@example.com" method="POST" id="cakeForm">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_subject" value="New Website Cake Order!">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="event">What are we celebrating?</label>
+                    <select id="event" name="event">
+                        <option value="wedding">Wedding (3-Tier Custom)</option>
+                        <option value="birthday">Birthday / Milestone</option>
+                        <option value="cupcakes">Cupcakes (By the Dozen)</option>
+                    </select>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="flavor1">Primary Flavor</label>
+                    <select id="flavor1" name="flavor1">
+                        <option value="red-velvet">Signature Red Velvet</option>
+                        <option value="vanilla">Classic Vanilla Bean</option>
+                        <option value="chocolate">Rich Chocolate</option>
+                    </select>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="flavor2">Secondary Flavor (Optional)</label>
+                    <select id="flavor2" name="flavor2">
+                        <option value="none">None (Single Flavor)</option>
+                        <option value="red-velvet">Signature Red Velvet</option>
+                        <option value="vanilla">Classic Vanilla Bean</option>
+                        <option value="chocolate">Rich Chocolate</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Design Ideas & Guest Count</label>
+                    <textarea id="details" name="details" rows="3" placeholder="Tell us about your vision and how many people you need to serve..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send to Aunt Barbara</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aunt Barbara's Cakes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
